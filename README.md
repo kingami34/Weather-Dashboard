@@ -11,7 +11,7 @@ Use the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) 
 ```
 AS A traveler
 I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+SO THAT I can plan a trip   accordingly
 ```
 
 ## Acceptance Criteria

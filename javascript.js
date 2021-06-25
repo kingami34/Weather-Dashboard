@@ -1,6 +1,12 @@
 $(document).ready(function () {
 
-
+    // let someVar = document.getElementById('someId')
+    // var mainList1 = document.createElement("li");
+    // var mainList2 = document.createElement("li");
+    // var mainList3 = document.createElement("li");
+    // var mainList4 = document.createElement("li");
+    // //code to get weather data
+    // someVar.append(mainList1, mainList2, mainList3, mainList4)
 
 
 
@@ -11,11 +17,12 @@ $(document).ready(function () {
         console.log(text)
         weatherSearch(text)
 
+    
 
 
+    })
 
 
-    });
 
 
 
@@ -24,50 +31,45 @@ $(document).ready(function () {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=eaa146ecc747767afdb5b95a5561b7e4")
             .then(response => response.json())
             .then(data => {
-                console.log(data.data)
-                for (var i = 0; i < data.data.length; i++) {
-                    var mainList = document.createElement("li");
-                    mainList.textContent = data.data[i].name + " Wind:  " + data.data[i].wind + " Temp:  " + data.data[i].temp + " Humidity:  " + data.data[i].humidity;
+                console.log(data)
+                // for (var i = 0; i < data.length; i++) {
+                //     var mainList = document.createElement("li");
+                //     mainList.textContent = data[i].name + " Weather:  " + data[i].weather + "  Wind: " + data[i].wind + " Main:  " + data[i].main;
 
-                    mainArea.append(mainList)
+                //     mainArea.append(mainList)
 
-                }
+                let someVar = document.getElementById('someId')
+                var mainList1 = document.createElement("li");
+                var mainList2 = document.createElement("li");
+                var mainList3 = document.createElement("li");
+                var mainList4 = document.createElement("li");
+                //code to get weather data
+                someVar.append(mainList1, mainList2, mainList3, mainList4);
 
-            })
 
-                // .then(data => {
-                //             console.log(data.data)
-                //             for (var i = 0; i < data.data.length; i++) {
-                //                 var mainList = document.createElement("li");
-                //                 mainList.textContent = data.data[i].name + " Wind:  " + data.data[i].wind + " Temp:  " + data.data[i].temp + " Humidity:  " + data.data[i].humidity;
 
-                //                 mainArea.append(mainList)
-                //             }
-
+                        
 
 
 
 
-                var cityNameElement = $('<p>');
+
+
+                var cityNameElement = $('<p>')
                 cityNameElement.text(city);
 
                 $('.citySearch').append(cityNameElement);
 
-
+            
             }
-    // function oneCall(lon, lat) {
-    //     fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly,alerts&appid=eaa146ecc747767afdb5b95a5561b7e4")
-    //         .then(response => response.json())
-    //         .then(data => console.log(data));
-
-    // };
-
-    //$(".citySearch").append(data)
+        
+        
+})
 
 
-        })
 
-    
+
+
 
 
 

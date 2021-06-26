@@ -17,13 +17,7 @@ $(document).ready(function () {
         console.log(text)
         weatherSearch(text)
 
-    
-
-
     })
-
-
-
 
 
     // Store API Key Weather
@@ -31,29 +25,12 @@ $(document).ready(function () {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=eaa146ecc747767afdb5b95a5561b7e4")
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                // for (var i = 0; i < data.length; i++) {
-                //     var mainList = document.createElement("li");
-                //     mainList.textContent = data[i].name + " Weather:  " + data[i].weather + "  Wind: " + data[i].wind + " Main:  " + data[i].main;
+                console.log(data.main)
+                
+                var displayMain = document.createElement("li");
+                displayMain.textContent = data.main.feels_like + " Humidity: " + data.main.humidity + " Temp: " + data.main.temp;  
 
-                //     mainArea.append(mainList)
-
-                let someVar = document.getElementById('someId')
-                var mainList1 = document.createElement("li");
-                var mainList2 = document.createElement("li");
-                var mainList3 = document.createElement("li");
-                var mainList4 = document.createElement("li");
-                //code to get weather data
-                someVar.append(mainList1, mainList2, mainList3, mainList4);
-
-
-
-                        
-
-
-
-
-
+                mainArea.append(displayMain)
 
                 var cityNameElement = $('<p>')
                 cityNameElement.text(city);
@@ -61,8 +38,8 @@ $(document).ready(function () {
                 $('.citySearch').append(cityNameElement);
 
             
-            }
-        
+            })
+        }   
         
 })
 

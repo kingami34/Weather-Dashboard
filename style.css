@@ -21,7 +21,7 @@ body {
     padding: 20px 10px;
     color: whitesmoke;
     position: relative;
-    top: -350px;
+    top: -200px;
   
 }
 .weather-point{
@@ -101,22 +101,20 @@ body {
     padding: 5px 15px;
     background-color: #3c3c44;
     border-radius: 50px;
-    text-align: center;
 }
-.city-group{
-    position: relative;
-    right: -700px;
-    width: 350px;
-    background-color: #3c3c44;
-    padding: 10px 10px;
-    border-radius: 40px;
-    text-align: center;
-    margin: 10px;
+.city-list{
     display: flex;
     justify-content: center;
-}
-
-/* .list-group-item{
+    position: relative;
+    top: 50px;
     background-color: #3c3c44;
-    padding: 5px 15px;
-} */
+    border-radius: 50px;
+    padding: 10px 15px;
+    width: 400px;
+    right: -450px;
+}
+ul li{
+    list-style-type: none;
+    font-size: 30px;
+    color: whitesmoke
+}

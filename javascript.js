@@ -40,8 +40,8 @@ $(document).ready(function () {
                 var displayDay = document.createElement("card");
                 displayDay.textContent = 
             
-            })
-        }   
+            
+        })   
         // function weatherSearch(city) {
         //     fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=eaa146ecc747767afdb5b95a5561b7e4")
         //         .then(response => response.json())

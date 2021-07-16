@@ -25,7 +25,7 @@ $(document).ready(function () {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=eaa146ecc747767afdb5b95a5561b7e4")
             .then(response => response.json())
             .then(data => {
-                console.log(data.main)
+                console.log(data)
                 
                 var displayMain = document.createElement("li");
                 displayMain.textContent = data.main.feels_like + " Humidity: " + data.main.humidity + " Temp: " + data.main.temp;  
@@ -37,10 +37,19 @@ $(document).ready(function () {
 
                 $('.citySearch').append(cityNameElement);
 
+                var displayDay = document.createElement("card");
+                displayDay.textContent = 
             
             })
         }   
-        
+        // function weatherSearch(city) {
+        //     fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=eaa146ecc747767afdb5b95a5561b7e4")
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             console.log(data)
+
+        //         })
+        //     }
 })
 
 

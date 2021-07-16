@@ -22,6 +22,8 @@ body {
     color: whitesmoke;
     position: relative;
     top: -200px;
+    background-color: transparent;
+    width: 300px;
   
 }
 .weather-point{
@@ -117,4 +119,7 @@ ul li{
     list-style-type: none;
     font-size: 30px;
     color: whitesmoke
+}
+.submitBtn{
+    font-size: 20px;
 }
